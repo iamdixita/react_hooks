@@ -11,6 +11,8 @@ function Counter() {
 
   return (
     <div>
+      <header>useState Hook examples</header>
+      <h1>1. Manages a simple counter </h1>
       <h2>Count: {count}</h2>
       {/* When the button is clicked, increase the count by 1 */}
       <button onClick={() => setCount(count + 1)}>Increase</button>
