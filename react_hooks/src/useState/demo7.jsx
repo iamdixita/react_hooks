@@ -11,7 +11,7 @@ function LightDarkMode() {
         background: darkMode ? "#333" : "#fff", 
         color: darkMode ? "#fff" : "#000", 
         height: "25vh",
-        textAlign: "center",
+        // textAlign: "center",
         paddingTop:"3rem"
       }}>
     <h1>7. Switches between light and dark mode</h1>

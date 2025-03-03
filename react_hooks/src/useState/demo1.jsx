@@ -1,6 +1,3 @@
-// useState is a React hook used to manage state inside functional components. 
-// It allows components to store and update values dynamically without using class components.
-
 // Definition: useState manages a simple counter.
 
 import React, { useState } from "react";

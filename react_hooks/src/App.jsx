@@ -1,32 +1,32 @@
 import React, { useState } from "react";
 import "./App.css";
-import Counter from "./useState/demo1";
-import Toggle from "./useState/demo2";
-import TextInput from "./useState/demo3";
-import FormExample from "./useState/demo4";
-import ShowHideText from "./useState/demo5";
-import RandomNumber from "./useState/demo6";
-import LightDarkMode from "./useState/demo7";
-import ItemList from "./useState/demo8";
-import CountdownTimer from "./useState/demo9";
-import FetchData from "./useState/demo10";
+import {Routes, Route, Link} from 'react-router-dom';
+
+import UseStateExamples from "./useState";
+import UseEffectExamples from "./useEffect";
 
 function App() {
+    return (
+        <div>
+        <h1>React Hooks Demo</h1>
+  
+        {/* Navigation Links */}
+        <nav>
+          <ul>
+            <li><Link to="/useState">useState</Link></li>
+            <li><Link to="/useEffect">useEffect</Link></li>
 
-  return (
-    <div className="container">
-        <Counter/>
-        <Toggle/>
-        <TextInput/>
-        <FormExample/>
-        <ShowHideText/>
-        <RandomNumber/>
-        <LightDarkMode/>
-        <ItemList/>
-        <CountdownTimer/>
-        <FetchData/>
-    </div>
-  );
-}
-
+          </ul>
+        </nav>
+  
+        {/* Routes */}
+        <Routes>
+          <Route path="/useState" element={<UseStateExamples />} />
+          <Route path="/useEffect" element={<UseEffectExamples/>} />
+          <Route path="/" element={<h2>Select a Hook Example</h2>} />
+        </Routes>
+      </div>
+    );
+  }
+  
 export default App;
