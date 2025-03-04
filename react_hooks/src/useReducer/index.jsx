@@ -13,7 +13,7 @@ import AuthComponent from "./demo10";
 function UseReducerExamples() {
     return (
       <div>
-        <h2>useState Examples</h2>
+        <h2>useReducer Examples</h2>
         <p>useReducer is a React Hook that manages complex state logic inside a component.
            It is an alternative to useState when state updates involve multiple conditions or dependent values.
            It works like Redux but for local component state.
