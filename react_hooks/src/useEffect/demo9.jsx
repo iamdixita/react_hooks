@@ -17,10 +17,32 @@ function DarkMode() {
 
   return (
     <>
+    {/* <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}> */}
+     <div
+      style={{
+        background: darkMode ? "#333" : "#fff", 
+        color: darkMode ? "#fff" : "#000", 
+        height: "25vh",
+        paddingTop:"3rem"
+      }}
+    >
     <h1>9. Dark Mode Toggle</h1>
-    <button onClick={() => setDarkMode(!darkMode)}>
+      <button
+        onClick={() => setDarkMode(!darkMode)}
+        style={{
+          padding: "10px 20px",
+          fontSize: "16px",
+          backgroundColor: darkMode ? "#fff" : "#333",
+          color: darkMode ? "#000" : "#fff",
+          border: "none",
+          cursor: "pointer",
+          borderRadius: "5px",
+          transition: "all 0.3s ease",
+        }}
+      >
       {darkMode ? "Toggle light mode" : " Toggle Dark Mode"}
-    </button>
+      </button>
+    </div>
     </>
   );
 }

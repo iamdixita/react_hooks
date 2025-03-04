@@ -34,7 +34,7 @@ const FilteredList = () => {
   }, []); // Empty dependency array → function reference remains constant
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
       <h1>8. Optimizing a List with Filtering and Memoization</h1>
 
       {/* Search input field */}

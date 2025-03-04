@@ -29,11 +29,13 @@ const UserProfile = () => {
 
   return (
     <>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>7. Optimizing Context API with useCallback</h1>
      {/* Button to update the user's name when clicked */}
-    <button onClick={() => updateUser("Bob")}>
+    <button style={{backgroundColor:"#e38690"}} onClick={() => updateUser("Bob")}>
       Change Name (Current: {user.name})
     </button>
+    </div>
     </>
   );
 };

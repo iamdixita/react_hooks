@@ -15,10 +15,10 @@ const SearchBar = () => {
   }, [query]); // Only recreates when `query` changes
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>3. Optimizing API Calls in a Search Bar</h1>
       <input type="text" onChange={(e) => setQuery(e.target.value)} placeholder="Search..." />
-      <button onClick={fetchResults}>Search</button>
+      <button style={{backgroundColor:"#e38690"}} onClick={fetchResults}>Search</button>
     </div>
   );
 };

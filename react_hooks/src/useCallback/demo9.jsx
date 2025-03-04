@@ -30,13 +30,13 @@ const Counter = () => {
   }, []); // No dependencies → function reference remains the same
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>9. Optimized Counter with Heavy Calculation</h1>
       {/* Button to increment count (does not trigger HeavyComponent re-render) */}
-      <button onClick={increment}>Count: {count}</button>
+      <button style={{backgroundColor:"#e38690"}} onClick={increment}>Count: {count}</button>
 
       {/* Button to change the number (triggers computation and re-renders HeavyComponent) */}
-      <button onClick={() => setNumber(number + 1)}>Change Number</button>
+      <button style={{backgroundColor:"#e38690"}} onClick={() => setNumber(number + 1)}>Change Number</button>
 
       {/* Renders HeavyComponent with the computed value */}
       <HeavyComponent value={computedValue} />

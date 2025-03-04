@@ -14,19 +14,19 @@ function CountdownTimer() {
   }, [seconds, isRunning]); // Runs when `seconds` or `isRunning` changes
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>9. Starts a countdown when the button is clicked</h1>
 
       <h2>Countdown: {seconds}s</h2>
 
       {/* Start button */}
-      <button onClick={() => setIsRunning(true)}>Start</button>
+      <button style={{backgroundColor:"green"}} onClick={() => setIsRunning(true)}>Start</button>
 
       {/* Stop button */}
-      <button onClick={() => setIsRunning(false)}>Stop</button>
+      <button style={{backgroundColor:"red"}} onClick={() => setIsRunning(false)}>Stop</button>
 
       {/* Reset button */}
-      <button onClick={() => { setSeconds(10); setIsRunning(false); }}>
+      <button style={{backgroundColor:"orange"}} onClick={() => { setSeconds(10); setIsRunning(false); }}>
         Reset
       </button>
     </div>

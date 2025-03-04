@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ClickCounter from "./demo1";
 import KeyPressListener from "./demo2";
 import SearchBar from "./demo3";
@@ -11,23 +11,55 @@ import Counter from "./demo9";
 import ApiFetcher from "./demo10";
 
 function UseCallbackExamples() {
-    return (
-      <div>
-        <h2>useCallback Examples</h2>
-        <p>useCallback is a React Hook that memoizes functions so that they do not get recreated on every render.</p>
-        <ClickCounter/>
-        <KeyPressListener/>
-        <SearchBar/>
-        <DebouncedSearch/>
-        <Timer/>
-        <ItemList/>
-        <Contextwithcallback/>
-        <FilteredList/>
-        <Counter/>
-        <ApiFetcher/>
+  const [visibleDemo, setVisibleDemo] = useState(null);
+
+  const toggleDemo = (demoName) => {
+    setVisibleDemo(visibleDemo === demoName ? null : demoName);
+  };
+
+  return (
+    <div className="container">
+      {/* Header and Definition */}
+      <header>useCallback Hook Examples</header>
+      <h2>Definition:</h2>
+      <p>
+        <code>useCallback</code> is a React Hook that memoizes functions so that they do not get recreated on every render.
+      </p>
+
+      {/* Buttons to toggle individual demos */}
+      <div className="demo-list">
+        <button onClick={() => toggleDemo("ClickCounter")}>Click Counter</button>
+        {visibleDemo === "ClickCounter" && <ClickCounter />}
+
+        <button onClick={() => toggleDemo("KeyPressListener")}>Key Press Listener</button>
+        {visibleDemo === "KeyPressListener" && <KeyPressListener />}
+
+        <button onClick={() => toggleDemo("SearchBar")}>Search Bar</button>
+        {visibleDemo === "SearchBar" && <SearchBar />}
+
+        <button onClick={() => toggleDemo("DebouncedSearch")}>Debounced Search</button>
+        {visibleDemo === "DebouncedSearch" && <DebouncedSearch />}
+
+        <button onClick={() => toggleDemo("Timer")}>Timer</button>
+        {visibleDemo === "Timer" && <Timer />}
+
+        <button onClick={() => toggleDemo("ItemList")}>Item List</button>
+        {visibleDemo === "ItemList" && <ItemList />}
+
+        <button onClick={() => toggleDemo("Contextwithcallback")}>Context with Callback</button>
+        {visibleDemo === "Contextwithcallback" && <Contextwithcallback />}
+
+        <button onClick={() => toggleDemo("FilteredList")}>Filtered List</button>
+        {visibleDemo === "FilteredList" && <FilteredList />}
+
+        <button onClick={() => toggleDemo("Counter")}>Counter</button>
+        {visibleDemo === "Counter" && <Counter />}
+
+        <button onClick={() => toggleDemo("ApiFetcher")}>API Fetcher</button>
+        {visibleDemo === "ApiFetcher" && <ApiFetcher />}
       </div>
-    );
-  }
-  
-  export default UseCallbackExamples;
-  
+    </div>
+  );
+}
+
+export default UseCallbackExamples;

@@ -29,10 +29,12 @@ const EventListenerExample = () => {
   }, []); // Runs only once when component mounts
 
   return (
-    <div ref={containerRef} style={{ padding: "20px" }}>
-    <h1>5. Persisting Values in Event Listeners</h1>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
+       <div ref={containerRef} style={{ padding: "20px" }}>
+       <h1>5. Persisting Values in Event Listeners</h1>
       <h2>Count: {count}</h2>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button style={{backgroundColor:"#e38690"}} onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
     </div>
   );
 };

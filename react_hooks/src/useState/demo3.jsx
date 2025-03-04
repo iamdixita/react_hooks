@@ -7,7 +7,7 @@ function TextInput() {
   const [text, setText] = useState("");
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>3. Stores and updates input field values </h1>
       {/* Input field updates the state on every change */}
       <input

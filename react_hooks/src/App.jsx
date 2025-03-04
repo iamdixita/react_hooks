@@ -12,11 +12,11 @@ import UseRefExamples from "./useRef";
 function App() {
     return (
         <div>
-        <h1>React Hooks Demo</h1>
+        {/* <h1>React Hooks Demo</h1> */}
   
         {/* Navigation Links */}
         <nav>
-          <ul>
+          <ul>   
             <li><Link to="/useState">useState</Link></li>
             <li><Link to="/useEffect">useEffect</Link></li>
             <li><Link to="/useReducer">useReducer</Link></li>
@@ -34,7 +34,7 @@ function App() {
           <Route path="/useMemo" element={<UseMemoExamples/>} />
           <Route path="/useCallback" element={<UseCallbackExamples/>} />
           <Route path="/useRef" element={<UseRefExamples/>} />
-          <Route path="/" element={<h2>Select a Hook Example</h2>} />
+          <Route path="/" element={<h2 style={{textAlign:"center",marginTop:"10rem",fontSize:"2rem"}}>Select a Hook Example</h2>} />
         </Routes>
       </div>
     );

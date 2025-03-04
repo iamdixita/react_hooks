@@ -28,7 +28,7 @@ const DebouncedSearch = () => {
   }, [debouncedQuery]); // Runs only when `debouncedQuery` updates
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>4. Debouncing a Function (Delaying Execution)</h1>
       <input
         type="text"

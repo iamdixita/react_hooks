@@ -44,7 +44,7 @@ const WebcamCapture = () => {
   };
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
       <h2>📸 Webcam Capture</h2>
 
       {/* Video Stream */}
@@ -52,9 +52,9 @@ const WebcamCapture = () => {
       <br />
 
       {/* Control Buttons */}
-      <button onClick={startWebcam}>Start Webcam</button>
-      <button onClick={captureImage}>Capture Image</button>
-      <button onClick={stopWebcam}>Stop Webcam</button>
+      <button style={{backgroundColor:"green"}} onClick={startWebcam}>Start Webcam</button>
+      <button style={{backgroundColor:"orange"}} onClick={captureImage}>Capture Image</button>
+      <button style={{backgroundColor:"red"}} onClick={stopWebcam}>Stop Webcam</button>
 
       {/* Hidden Canvas for Image Capture */}
       <canvas ref={canvasRef} style={{ display: "none" }}></canvas>

@@ -16,7 +16,7 @@ function FetchData() {
   }, []);
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>5. Fetch Data from an API (componentDidMount)</h1>
       <h2>Fetched Data:</h2>
       <ul>

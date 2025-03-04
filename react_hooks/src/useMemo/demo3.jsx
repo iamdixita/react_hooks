@@ -18,11 +18,11 @@ const SortedList = () => {
   }, [sortOrder]); // Runs only when `sortOrder` changes
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>3. Sorting Large Arrays </h1>
       <h2>Sorted Numbers:</h2>
       <ul>{sortedNumbers.map((num, index) => <li key={index}>{num}</li>)}</ul>
-      <button onClick={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}>Toggle Sort Order</button>
+      <button style={{backgroundColor:"#D32D41"}} onClick={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}>Toggle Sort Order</button>
     </div>
   );
 };

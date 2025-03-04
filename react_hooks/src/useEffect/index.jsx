@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import EveryRender from "./demo1";
 import RunOnceEffect from "./demo2";
 import EffectWithState from "./demo3";
@@ -11,22 +11,52 @@ import DarkMode from "./demo9";
 import AnimatedText from "./demo10";
 
 function UseEffectExamples() {
+  const [visibleDemo, setVisibleDemo] = useState(null);
+
+  const toggleDemo = (demoName) => {
+    setVisibleDemo(visibleDemo === demoName ? null : demoName);
+  };
+
   return (
-    <div>
-      <h2>useEffect Examples</h2>
-      <p>useEffect is a React Hook that lets you perform side effects in functional components. 
-         It replaces lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount from class components.
+    <div className="container">
+      <header>useEffect Hook Examples</header>
+      <h2>Definition:</h2>
+      <p>
+        useEffect is a React Hook that lets you perform side effects in functional components.
+        It replaces lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount from class components.
       </p>
-      <EveryRender/>
-      <RunOnceEffect/>
-      <EffectWithState/>
-      <EffectWithProps/>
-      <FetchData/>
-      <WindowResize/>
-      <Timer/>
-      <SearchUser/>
-      <DarkMode/>
-      <AnimatedText/>
+
+      <div className="demo-list">
+        <button onClick={() => toggleDemo("EveryRender")}>Every Render</button>
+        {visibleDemo === "EveryRender" && <EveryRender />}
+
+        <button onClick={() => toggleDemo("RunOnceEffect")}>Run Once Effect</button>
+        {visibleDemo === "RunOnceEffect" && <RunOnceEffect />}
+
+        <button onClick={() => toggleDemo("EffectWithState")}>Effect with State</button>
+        {visibleDemo === "EffectWithState" && <EffectWithState />}
+
+        <button onClick={() => toggleDemo("EffectWithProps")}>Effect with Props</button>
+        {visibleDemo === "EffectWithProps" && <EffectWithProps />}
+
+        <button onClick={() => toggleDemo("FetchData")}>Fetch Data</button>
+        {visibleDemo === "FetchData" && <FetchData />}
+
+        <button onClick={() => toggleDemo("WindowResize")}>Window Resize</button>
+        {visibleDemo === "WindowResize" && <WindowResize />}
+
+        <button onClick={() => toggleDemo("Timer")}>Timer</button>
+        {visibleDemo === "Timer" && <Timer />}
+
+        <button onClick={() => toggleDemo("SearchUser")}>Search User</button>
+        {visibleDemo === "SearchUser" && <SearchUser />}
+
+        <button onClick={() => toggleDemo("DarkMode")}>Dark Mode</button>
+        {visibleDemo === "DarkMode" && <DarkMode />}
+
+        <button onClick={() => toggleDemo("AnimatedText")}>Animated Text</button>
+        {visibleDemo === "AnimatedText" && <AnimatedText />}
+      </div>
     </div>
   );
 }

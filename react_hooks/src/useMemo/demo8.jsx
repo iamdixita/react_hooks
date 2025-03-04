@@ -21,12 +21,12 @@ const PaginatedList = () => {
   }, [page]); // Only updates when `page` changes
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>8. Pagination Handling - Memoizing Paginated Data</h1>
       <h2>Page {page}</h2>
       <ul>{paginatedItems.map((item, index) => <li key={index}>{item}</li>)}</ul>
-      <button disabled={page === 1} onClick={() => setPage(page - 1)}>⬅ Prev</button>
-      <button disabled={page === 10} onClick={() => setPage(page + 1)}>Next ➡</button>
+      <button style={{backgroundColor:"orange"}} disabled={page === 1} onClick={() => setPage(page - 1)}>⬅ Prev</button>
+      <button style={{backgroundColor:"green"}} disabled={page === 10} onClick={() => setPage(page + 1)}>Next ➡</button>
     </div>
   );
 };

@@ -12,6 +12,7 @@ const PreviousStateExample = () => {
   
     return (
       <>
+      <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
       <h1>2. Storing Previous State Value</h1>
         <input
           type="text"
@@ -20,6 +21,7 @@ const PreviousStateExample = () => {
         />
         <h2>Current Value: {inputValue}</h2>
         <h2>Previous Value: {previousInputValue.current}</h2>
+      </div>
       </>
     );
 };

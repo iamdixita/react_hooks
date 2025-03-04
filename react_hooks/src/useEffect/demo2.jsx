@@ -11,8 +11,10 @@ function RunOnceEffect() {
 
   return (
     <>
-        <h1>2. Run useEffect Only Once on Mount (componentDidMount)</h1>
-        <h2>Check the console!</h2>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
+      <h1>2. Run useEffect Only Once on Mount (componentDidMount)</h1>
+      <h2>Check the console!</h2>
+    </div>
     </>
     );
 }

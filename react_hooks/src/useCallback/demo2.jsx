@@ -21,8 +21,10 @@ const KeyPressListener = () => {
 
   return (
     <>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>2. Optimizing Event Listeners</h1>
     <h2>Press any key and check the console</h2>
+    </div>
     </>
   );
 };

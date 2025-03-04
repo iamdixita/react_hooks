@@ -12,7 +12,7 @@ const ScrollToBottom = () => {
   };
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>6. Implementing a Scroll to Bottom Feature</h1>
       {/* Scrollable container */}
       <div style={{ height: "200px", overflowY: "auto", border: "1px solid black", marginBottom: "10px" }}>
@@ -24,7 +24,7 @@ const ScrollToBottom = () => {
       </div>
 
       {/* Move the button outside to avoid interference */}
-      <button onClick={scrollToBottom}>Scroll to Bottom</button>
+      <button style={{backgroundColor:"#e38690"}} onClick={scrollToBottom}>Scroll to Bottom</button>
     </div>
   );
 };

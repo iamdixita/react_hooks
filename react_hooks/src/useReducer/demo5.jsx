@@ -38,10 +38,10 @@ const EnhancedModal = () => {
   }, [state.isVisible]);
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>5. Modal Visibility Toggle</h1>
       {/* Button to open modal */}
-      <button onClick={() => dispatch({ type: "OPEN" })}>Open Modal</button>
+      <button style={{backgroundColor:"#e38690"}} onClick={() => dispatch({ type: "OPEN" })}>Open Modal</button>
 
       {/* Modal - Only show when state.isVisible is true */}
       {state.isVisible && (
@@ -50,7 +50,7 @@ const EnhancedModal = () => {
             <h2>Enhanced Modal</h2>
             <p>Press "ESC" to close or click the button below.</p>
             {/* Button to close modal */}
-            <button onClick={() => dispatch({ type: "CLOSE" })}>Close</button>
+            <button style={{backgroundColor:"red"}} onClick={() => dispatch({ type: "CLOSE" })}>Close</button>
           </div>
         </div>
       )}

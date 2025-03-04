@@ -70,7 +70,7 @@ const StepForm = () => {
   };
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>7. Step-Based Form Navigation </h1>
     <div style={styles.container}>
       <h2>Step {state.step} of 3</h2>

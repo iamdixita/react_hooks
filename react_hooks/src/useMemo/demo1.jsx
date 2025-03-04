@@ -20,13 +20,13 @@ const ExpensiveComponent = () => {
   const computedValue = useMemo(() => expensiveCalculation(number), [number]);
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>1. Expensive Calculation (Avoids Unnecessary Re-Runs)</h1>
       <h2>Count: {count}</h2>
-      <button onClick={() => setCount(count + 1)}>Increase Count</button>
+      <button style={{backgroundColor:"red"}} onClick={() => setCount(count + 1)}>Increase Count</button>
 
       <h2>Computed Value: {computedValue}</h2>
-      <button onClick={() => setNumber(number + 1)}>Change Number</button>
+      <button style={{backgroundColor:"green"}} onClick={() => setNumber(number + 1)}>Change Number</button>
     </div>
   );
 };

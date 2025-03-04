@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Counter from "./demo1";
 import Toggle from "./demo2";
 import TextInput from "./demo3";
@@ -11,22 +11,52 @@ import CountdownTimer from "./demo9";
 import FetchData from "./demo10";
 
 function UseStateExamples() {
+  const [visibleDemo, setVisibleDemo] = useState(null);
+
+  const toggleDemo = (demoName) => {
+    setVisibleDemo(visibleDemo === demoName ? null : demoName);
+  };
+
   return (
-    <div>
-      <h2>useState Examples</h2>
-      <p>useState is a React hook used to manage state inside functional components. 
-         It allows components to store and update values dynamically without using class components.
-      </p>
-        <Counter/>
-        <Toggle/>
-        <TextInput/>
-        <FormExample/>
-        <ShowHideText/>
-        <RandomNumber/>
-        <LightDarkMode/>
-        <ItemList/>
-        <CountdownTimer/>
-        <FetchData/>
+    <div className="container">
+      <header>useState Hook Examples</header>
+      <h2>Definition:</h2>
+      <h3>
+        useState is a React hook used to manage state inside functional components.
+        It allows components to store and update values dynamically without using class components.
+      </h3>
+
+      <div className="demo-list">
+        <button onClick={() => toggleDemo("Counter")}>Counter</button>
+        {visibleDemo === "Counter" && <Counter />}
+
+        <button onClick={() => toggleDemo("Toggle")}>Toggle</button>
+        {visibleDemo === "Toggle" && <Toggle />}
+
+        <button onClick={() => toggleDemo("TextInput")}>Text Input</button>
+        {visibleDemo === "TextInput" && <TextInput />}
+
+        <button onClick={() => toggleDemo("FormExample")}>Form Example</button>
+        {visibleDemo === "FormExample" && <FormExample />}
+
+        <button onClick={() => toggleDemo("ShowHideText")}>Show/Hide Text</button>
+        {visibleDemo === "ShowHideText" && <ShowHideText />}
+
+        <button onClick={() => toggleDemo("RandomNumber")}>Random Number</button>
+        {visibleDemo === "RandomNumber" && <RandomNumber />}
+
+        <button onClick={() => toggleDemo("LightDarkMode")}>Light/Dark Mode</button>
+        {visibleDemo === "LightDarkMode" && <LightDarkMode />}
+
+        <button onClick={() => toggleDemo("ItemList")}>Item List</button>
+        {visibleDemo === "ItemList" && <ItemList />}
+
+        <button onClick={() => toggleDemo("CountdownTimer")}>Countdown Timer</button>
+        {visibleDemo === "CountdownTimer" && <CountdownTimer />}
+
+        <button onClick={() => toggleDemo("FetchData")}>Fetch Data</button>
+        {visibleDemo === "FetchData" && <FetchData />}
+      </div>
     </div>
   );
 }

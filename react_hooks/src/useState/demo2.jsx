@@ -8,9 +8,9 @@ function Toggle() {
 
   return (
     <>
-    <br></br><div style={{backgroundColor:"lightgray", padding:"1rem"}}>
+    <br></br><div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>2. Toggles between two values (true / false) </h1>
-    <button onClick={() => setIsOn(!isOn)}>
+    <button style={{backgroundColor:"#e38690"}} onClick={() => setIsOn(!isOn)}>
       {/* If isOn is true, display "ON", otherwise "OFF" */}
       {isOn ? "ON" : "OFF"}
     </button>

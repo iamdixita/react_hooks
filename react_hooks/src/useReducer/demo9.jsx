@@ -34,15 +34,15 @@ const Stopwatch = () => {
   }, [state.isRunning]); // Effect runs when `isRunning` changes
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
       <h1>9. Stopwatch with Start, Pause, and Reset</h1>
       {/* Display the elapsed time */}
       <h2>⏱ Time: {state.time}s</h2>
 
       {/* Buttons to control the stopwatch */}
-      <button onClick={() => dispatch({ type: "START" })}>Start</button>
-      <button onClick={() => dispatch({ type: "PAUSE" })}>Pause</button>
-      <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
+      <button style={{backgroundColor:"green"}} onClick={() => dispatch({ type: "START" })}>Start</button>
+      <button style={{backgroundColor:"red"}} onClick={() => dispatch({ type: "PAUSE" })}>Pause</button>
+      <button style={{backgroundColor:"orange"}} onClick={() => dispatch({ type: "RESET" })}>Reset</button>
     </div>
   );
 };

@@ -15,14 +15,16 @@ const ItemList = () => {
 
   return (
     <>
-     <h1>6. Optimizing Button Click Handlers in a List</h1>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
+    <h1>6. Optimizing Button Click Handlers in a List</h1>
     <ul>
       {items.map((item) => (
         <li key={item}>
-          {item} <button onClick={() => handleClick(item)}>Select</button>
+          {item} <button style={{backgroundColor:"#e38690"}} onClick={() => handleClick(item)}>Select</button>
         </li>
       ))}
     </ul>
+    </div>
     </>
   );
 };

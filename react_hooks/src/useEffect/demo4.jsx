@@ -10,8 +10,10 @@ function EffectWithProps({ name }) {
 
   return(
     <>
-    <h1>4. Run useEffect When Props Change</h1>
-    <h2>Hello, {name}!</h2>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
+      <h1>4. Run useEffect When Props Change</h1>
+      <h2>Hello, {name}!</h2>
+    </div>
     </>
   ); 
 }

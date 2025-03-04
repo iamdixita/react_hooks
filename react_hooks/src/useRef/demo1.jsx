@@ -10,10 +10,10 @@ const FocusInput = () => {
   };
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>1. Accessing DOM Elements (Focus on Input Field)</h1>
       <input ref={inputRef} type="text" placeholder="Enter something..." />
-      <button onClick={focusInput}>Focus Input</button>
+      <button style={{backgroundColor:"#e38690"}} onClick={focusInput}>Focus Input</button>
     </div>
   );
 };

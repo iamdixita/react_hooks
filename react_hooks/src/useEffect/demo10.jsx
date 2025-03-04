@@ -16,10 +16,12 @@ function AnimatedText() {
 
   return (
     <>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>10. Animate Component on Mount</h1>
     <h2 style={{ opacity, transition: "opacity 1s" }}>
       Hello, React!
     </h2>
+    </div>
     </>
   );
 }

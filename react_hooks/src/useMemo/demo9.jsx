@@ -17,7 +17,7 @@ const RegexHighlighter = () => {
   }, [text]); // Runs only when `text` changes
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>9. Avoiding Expensive Regex Computation</h1>
       <textarea onChange={(e) => setText(e.target.value)} placeholder="Type something about React..." />
       <p dangerouslySetInnerHTML={{ __html: highlightedText }}></p>

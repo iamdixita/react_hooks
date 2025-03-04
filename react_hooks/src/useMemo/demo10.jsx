@@ -32,7 +32,7 @@ const CachedApiData = () => {
   }, [data]);
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>10. Caching API Data in Local Storage</h1>
       <h2>Memoized API Data</h2>
       <ul>{memoizedData.map((item) => <li key={item.id}>{item.title}</li>)}</ul>

@@ -17,8 +17,10 @@ const Timer = () => {
 
   return(
     <>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>5. Memoizing a Function in useEffect</h1>
     <h2>Time: {time}s</h2>
+    </div>
     </>
   ); 
 };

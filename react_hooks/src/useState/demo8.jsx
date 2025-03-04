@@ -7,10 +7,10 @@ function ItemList() {
   const [items, setItems] = useState([]);
 
   return (
-    <div style={{backgroundColor:"lightgray", padding:"1rem"}}>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
      <h1>8. Manages an array and updates it dynamically</h1>
       {/* Adds a new item to the list when clicked */}
-      <button onClick={() => setItems([...items, `Item ${items.length + 1}`])}>
+      <button style={{backgroundColor:"#e38690"}} onClick={() => setItems([...items, `Item ${items.length + 1}`])}>
         Add Item
       </button>
       <p>

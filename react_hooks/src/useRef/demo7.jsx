@@ -12,7 +12,7 @@ const SaveDraft = () => {
   };
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>7. Save Draft Using useRef Without Re-rendering</h1>
       <input type="text" placeholder="Type something..." onChange={handleChange} />
       <p>Saved Draft: {displayText}</p>

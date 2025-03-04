@@ -20,16 +20,16 @@ const ShoppingCart = () => {
   const [cart, dispatch] = useReducer(cartReducer, []);
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>4. Cart Management (Add/Remove Items)</h1>
       {/* Buttons to add specific items to the cart */}
-      <button onClick={() => dispatch({ type: "ADD_ITEM", name: "Strawberry" })}>
+      <button style={{backgroundColor:"#e38690"}} onClick={() => dispatch({ type: "ADD_ITEM", name: "Strawberry" })}>
         Add Strawberry
       </button>
-      <button onClick={() => dispatch({ type: "ADD_ITEM", name: "Cherry" })}>
+      <button style={{backgroundColor:"#e38690"}} onClick={() => dispatch({ type: "ADD_ITEM", name: "Cherry" })}>
         Add Cherry
       </button>
-      <button onClick={() => dispatch({ type: "ADD_ITEM", name: "Blueberry" })}>
+      <button style={{backgroundColor:"#e38690"}} onClick={() => dispatch({ type: "ADD_ITEM", name: "Blueberry" })}>
         Add Blueberry
       </button>
 

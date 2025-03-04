@@ -23,7 +23,7 @@ const FilteredList = () => {
   }, [search]); // Only run when `search` changes
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>2. Filtering Large Data Lists</h1>
       <input type="text" placeholder="Search users..." onChange={(e) => setSearch(e.target.value)} />
       <ul>{filteredUsers.map((user) => <li key={user.id}>{user.name}</li>)}</ul>

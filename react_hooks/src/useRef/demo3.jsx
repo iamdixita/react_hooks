@@ -9,10 +9,10 @@ const RenderCounter = () => {
   renderCount.current += 1; // Increment render count
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>3. Tracking Component Renders</h1>
       <h2>Render Count: {renderCount.current}</h2>
-      <button onClick={() => setCount(count + 1)}>Re-render</button>
+      <button style={{backgroundColor:"#e38690"}} onClick={() => setCount(count + 1)}>Re-render</button>
     </div>
   );
 };

@@ -50,7 +50,7 @@ const UndoRedoExample = () => {
   const [state, dispatch] = useReducer(undoRedoReducer, initialState);
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>8. Undo/Redo State Management</h1>
     <div style={styles.container}>
       <h2>📝 Undo/Redo Example</h2>

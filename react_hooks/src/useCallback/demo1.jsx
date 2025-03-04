@@ -14,10 +14,10 @@ const ClickCounter = () => {
   }, []); // No dependencies, so function is created only once
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>1. Preventing Function Recreation in an Event Handler</h1>
       <h2>Count: {count}</h2>
-      <button onClick={handleClick}>Click Me</button>
+      <button style={{backgroundColor:"#e38690"}} onClick={handleClick}>Click Me</button>
     </div>
   );
 };

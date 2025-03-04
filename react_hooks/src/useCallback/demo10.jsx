@@ -42,10 +42,10 @@ const ApiFetcher = () => {
   }, [data]); // Runs only when `data` changes
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
       <h1>10. Optimized API Fetching with Memoized Response Processing</h1>
       {/* Clicking this button toggles the refresh state, causing re-render */}
-      <button onClick={() => setRefresh(!refresh)}>Refresh Data</button>
+      <button style={{backgroundColor:"#e38690"}} onClick={() => setRefresh(!refresh)}>Refresh Data</button>
 
       {/* Pass processed data to the memoized component */}
       <DataDisplay data={processedData} />

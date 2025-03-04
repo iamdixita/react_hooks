@@ -27,10 +27,12 @@ const MeasureDiv = () => {
   }, []); // Runs once on mount
 
   return (
-    <div ref={divRef} style={{ width: "50%", height: "200px", background: "lightblue", padding: "20px" }}>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
+    <div ref={divRef} style={{ width: "50%", height: "200px", background: "darkblue", padding: "20px",alignContent:"center",marginLeft:"22rem", color:"white" }}>
     <h1>9. Measure Element Size (Dynamic Resizing)</h1>
       <p>📏 Width: {size.width}px</p>
       <p>📐 Height: {size.height}px</p>
+    </div>
     </div>
   );
 };

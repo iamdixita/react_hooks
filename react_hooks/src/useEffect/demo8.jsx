@@ -25,7 +25,7 @@ function SearchUser() {
   }, [username]); // Runs when `username` changes
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
       <h1>8. GitHub User Search</h1>
 
       {/* Input field to enter GitHub username */}

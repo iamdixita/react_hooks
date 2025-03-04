@@ -24,16 +24,16 @@ const VideoControl = () => {
   };
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>8. Control a Video Player</h1>
       {/* Video element controlled by ref */}
       <video ref={videoRef} width="300" src="https://www.w3schools.com/html/mov_bbb.mp4" controls />
 
       {/* Video control buttons */}
       <div>
-        <button onClick={handlePlay}>▶ Play</button>
-        <button onClick={handlePause}>⏸ Pause</button>
-        <button onClick={handleRestart}>🔄 Restart</button>
+        <button style={{backgroundColor:"green"}} onClick={handlePlay}>▶ Play</button>
+        <button style={{backgroundColor:"red"}} onClick={handlePause}>⏸ Pause</button>
+        <button style={{backgroundColor:"orange"}} onClick={handleRestart}>🔄 Restart</button>
       </div>
     </div>
   );

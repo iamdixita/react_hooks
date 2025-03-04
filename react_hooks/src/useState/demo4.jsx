@@ -12,7 +12,7 @@ function FormExample() {
   };
 
   return (
-    <div style={{backgroundColor:"lightgray", padding:"1rem"}}>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>4. Manages multiple form fields</h1>
       {/* Name input field */}
       <input name="name" value={form.name} onChange={handleChange} placeholder="Name" />

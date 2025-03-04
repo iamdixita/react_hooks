@@ -16,10 +16,10 @@ const ConditionalRendering = () => {
   }, [show]);
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>7. Memoizing Conditional JSX Rendering</h1>
-      <button onClick={() => setCount(count + 1)}>Increase Count {count}</button>
-      <button onClick={() => setShow(!show)}>Toggle Content</button>
+      <button style={{backgroundColor:"red"}} onClick={() => setCount(count + 1)}>Increase Count {count}</button>
+      <button style={{backgroundColor:"green"}} onClick={() => setShow(!show)}>Toggle Content</button>
 
       {/* Memoized JSX content */}
       {show && memoizedContent}

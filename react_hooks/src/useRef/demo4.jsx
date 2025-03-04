@@ -19,11 +19,11 @@ const TimerExample = () => {
   };
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>4. Handling Timers</h1>
       <h2>🔄 Timer using useRef</h2>
-      <button onClick={startTimer}>Start Timer</button>
-      <button onClick={stopTimer}>Stop Timer</button>
+      <button style={{backgroundColor:"green"}} onClick={startTimer}>Start Timer</button>
+      <button style={{backgroundColor:"red"}} onClick={stopTimer}>Stop Timer</button>
     </div>
   );
 };

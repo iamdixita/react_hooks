@@ -16,12 +16,12 @@ const Cart = () => {
   }, [cart]); // Only recalculates when `cart` changes
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>6. Memoizing Computed Totals in Shopping Cart</h1>
       <h2>Total Price: ${totalPrice}</h2> {/* Displays the total cart value */}
       
       {/* Button to add a new item to the cart */}
-      <button onClick={() => setCart([...cart, { name: "New Item", price: 150 }])}>
+      <button style={{backgroundColor:"#D32D41"}} onClick={() => setCart([...cart, { name: "New Item", price: 150 }])}>
         Add Item
       </button>
     </div>

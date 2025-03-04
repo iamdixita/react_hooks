@@ -21,15 +21,15 @@ const Counter = () => {
   const [state, dispatch] = useReducer(counterReducer, { count: 0 });
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>1. Basic Counter (Increment & Decrement)</h1>
       <h2>Count: {state.count}</h2> {/* Display current count */}
       
       {/* Button to increase count */}
-      <button onClick={() => dispatch({ type: "INCREMENT" })}>+</button>
+      <button style={{backgroundColor:"#000"}} onClick={() => dispatch({ type: "INCREMENT" })}>+</button>
 
       {/* Button to decrease count */}
-      <button onClick={() => dispatch({ type: "DECREMENT" })}>-</button>
+      <button style={{backgroundColor:"#000"}} onClick={() => dispatch({ type: "DECREMENT" })}>-</button>
     </div>
   );
 };

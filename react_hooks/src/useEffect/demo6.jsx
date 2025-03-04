@@ -19,8 +19,10 @@ function WindowResize() {
 
   return(
     <>
-     <h1>6. Cleanup Function (Unsubscribe Events)</h1>
-     <h2>Window Width: {width}px</h2>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
+      <h1>6. Cleanup Function (Unsubscribe Events)</h1>
+      <h2>Window Width: {width}px</h2>
+    </div>
     </>
   ); 
 }

@@ -7,10 +7,10 @@ function ShowHideText() {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <div style={{padding:"1rem"}}>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>5. controls the visibility of an element</h1>
       {/* Toggles the text visibility */}
-      <button onClick={() => setIsVisible(!isVisible)}>
+      <button style={{backgroundColor:"#e38690"}} onClick={() => setIsVisible(!isVisible)}>
         {isVisible ? "Hide" : "Show"} Text
       </button>
 

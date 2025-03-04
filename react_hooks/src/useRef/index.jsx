@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import FocusInput from "./demo1";
 import PreviousStateExample from "./demo2";
 import RenderCounter from "./demo3";
@@ -11,25 +11,56 @@ import MeasureDiv from "./demo9";
 import WebcamCapture from "./demo10";
 
 function UseRefExamples() {
-    return (
-      <div>
-        <h2>useRef Examples</h2>
-        <p>useRef is a React Hook that allows you to create a mutable reference that persists across renders without causing re-renders.
-            In simple terms, it lets you store a value that does not trigger a re-render when updated.
-        </p>
-        <FocusInput/>
-        <PreviousStateExample/>
-        <RenderCounter/>
-        <TimerExample/>
-        <EventListenerExample/>
-        <ScrollToBottom/>
-        <SaveDraft/>
-        <VideoControl/>
-        <MeasureDiv/>
-        <WebcamCapture/>
+  const [visibleDemo, setVisibleDemo] = useState(null);
+
+  const toggleDemo = (demoName) => {
+    setVisibleDemo(visibleDemo === demoName ? null : demoName);
+  };
+
+  return (
+    <div className="container">
+      {/* Header and Definition */}
+      <header>useRef Hook Examples</header>
+      <h2>Definition:</h2>
+      <p>
+        <code>useRef</code> is a React Hook that allows you to create a mutable reference that persists across renders without causing re-renders. 
+        In simple terms, it lets you store a value that does not trigger a re-render when updated.
+      </p>
+
+      {/* Buttons to toggle individual demos */}
+      <div className="demo-list">
+        <button onClick={() => toggleDemo("FocusInput")}>Focus Input</button>
+        {visibleDemo === "FocusInput" && <FocusInput />}
+
+        <button onClick={() => toggleDemo("PreviousStateExample")}>Previous State Example</button>
+        {visibleDemo === "PreviousStateExample" && <PreviousStateExample />}
+
+        <button onClick={() => toggleDemo("RenderCounter")}>Render Counter</button>
+        {visibleDemo === "RenderCounter" && <RenderCounter />}
+
+        <button onClick={() => toggleDemo("TimerExample")}>Timer Example</button>
+        {visibleDemo === "TimerExample" && <TimerExample />}
+
+        <button onClick={() => toggleDemo("EventListenerExample")}>Event Listener Example</button>
+        {visibleDemo === "EventListenerExample" && <EventListenerExample />} <br></br>
+
+        <button onClick={() => toggleDemo("SaveDraft")}>Save Draft</button>
+        {visibleDemo === "SaveDraft" && <SaveDraft />}
+
+        <button onClick={() => toggleDemo("VideoControl")}>Video Control</button>
+        {visibleDemo === "VideoControl" && <VideoControl />}
+
+        <button onClick={() => toggleDemo("MeasureDiv")}>Measure Div</button>
+        {visibleDemo === "MeasureDiv" && <MeasureDiv />}
+
+        <button onClick={() => toggleDemo("WebcamCapture")}>Webcam Capture</button>
+        {visibleDemo === "WebcamCapture" && <WebcamCapture />}
+
+        <button onClick={() => toggleDemo("ScrollToBottom")}>Scroll to Bottom</button>
+        {visibleDemo === "ScrollToBottom" && <ScrollToBottom />}
       </div>
-    );
-  }
-  
-  export default UseRefExamples;
-  
+    </div>
+  );
+}
+
+export default UseRefExamples;

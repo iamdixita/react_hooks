@@ -114,7 +114,7 @@ const EnhancedDataFetching = () => {
       </ul>
 
       {/* Pagination controls */}
-      <div>
+      <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
         <button
           style={state.page === 1 ? { ...styles.button, ...styles.disabledButton } : { ...styles.button, ...styles.navButton }}
           onClick={() => dispatch({ type: "SET_PAGE", page: state.page - 1 })}

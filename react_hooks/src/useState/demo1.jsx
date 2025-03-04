@@ -7,12 +7,11 @@ function Counter() {
   const [count, setCount] = useState(0);
 
   return (
-    <div>
-      <header>useState Hook examples</header>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
       <h1>1. Manages a simple counter </h1>
       <h2>Count: {count}</h2>
       {/* When the button is clicked, increase the count by 1 */}
-      <button onClick={() => setCount(count + 1)}>Increase</button>
+      <button style={{backgroundColor:"#e38690"}} onClick={() => setCount(count + 1)}>Increase</button>
     </div>
   );
 }

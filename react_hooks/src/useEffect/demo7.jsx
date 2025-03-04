@@ -20,8 +20,10 @@ function Timer() {
 
   return(
     <>
-    <h1>7. Timer with Cleanup Function</h1>
-    <h2>Time Elapsed: {seconds} sec</h2>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
+      <h1>7. Timer with Cleanup Function</h1>
+      <h2>Time Elapsed: {seconds} sec</h2>
+    </div>
     </>
   ); 
 }

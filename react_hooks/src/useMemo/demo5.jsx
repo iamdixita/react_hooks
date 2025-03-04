@@ -24,9 +24,9 @@ const TransformedData = () => {
   }, [filterAge]); // Recalculates only when `filterAge` changes
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>5. Memoizing API Response Data Transformations</h1>
-      <button onClick={() => setFilterAge(filterAge + 5)}>Increase Age Filter</button>
+      <button style={{backgroundColor:"#D32D41"}} onClick={() => setFilterAge(filterAge + 5)}>Increase Age Filter</button>
       <pre>{JSON.stringify(transformedData, null, 2)}</pre>
     </div>
   );

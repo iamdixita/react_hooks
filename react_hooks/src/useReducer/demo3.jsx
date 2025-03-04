@@ -24,7 +24,7 @@ const TodoApp = () => {
   const [input, setInput] = useState("");
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>3. Todo List with Add & Remove</h1>
 
       {/* Input field for adding new todos */}
@@ -32,7 +32,7 @@ const TodoApp = () => {
 
 
       {/* Button to add a new todo, dispatching an ADD action */}
-      <button onClick={() => dispatch({ type: "ADD", text: input })}>
+      <button style={{backgroundColor:"#000"}} onClick={() => dispatch({ type: "ADD", text: input })}>
         Add Todo
       </button>
 
@@ -42,7 +42,7 @@ const TodoApp = () => {
           <li key={todo.id}>
             {todo.text}{" "}
             {/* Button to remove a todo, dispatching a REMOVE action */}
-            <button onClick={() => dispatch({ type: "REMOVE", id: todo.id })}>
+            <button style={{backgroundColor:"#e38690"}} onClick={() => dispatch({ type: "REMOVE", id: todo.id })}>
               Remove
             </button>
           </li>

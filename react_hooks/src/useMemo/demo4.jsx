@@ -21,10 +21,10 @@ const fibonacci = (n) => {
     }, [num]);
   
     return (
-      <div>
+      <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
         <h1>4. Fibonacci Calculator</h1>
         <h2>Fibonacci of {num}: {fibValue}</h2>
-        <button onClick={() => setNum(num + 1)}>Increase Number</button>
+        <button style={{backgroundColor:"#D32D41"}} onClick={() => setNum(num + 1)}>Increase Number</button>
       </div>
     );
   };

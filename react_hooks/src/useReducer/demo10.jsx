@@ -44,7 +44,7 @@ const AuthComponent = () => {
   };
 
   return (
-    <div>
+    <div style={{backgroundColor:"lightgray", padding:"2.2rem"}}>
     <h1>10. User Authentication State - Simulating login/logout.</h1>
     <div style={styles.container}>
       <h2>🔐 Authentication</h2>
