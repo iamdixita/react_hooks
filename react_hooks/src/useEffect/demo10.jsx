@@ -16,7 +16,7 @@ function AnimatedText() {
 
   return (
     <>
-    <h1>Animate Component on Mount</h1>
+    <h1>10. Animate Component on Mount</h1>
     <h2 style={{ opacity, transition: "opacity 1s" }}>
       Hello, React!
     </h2>

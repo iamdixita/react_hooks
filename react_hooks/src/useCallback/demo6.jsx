@@ -14,6 +14,8 @@ const ItemList = () => {
   }, []);
 
   return (
+    <>
+     <h1>6. Optimizing Button Click Handlers in a List</h1>
     <ul>
       {items.map((item) => (
         <li key={item}>
@@ -21,6 +23,7 @@ const ItemList = () => {
         </li>
       ))}
     </ul>
+    </>
   );
 };
 

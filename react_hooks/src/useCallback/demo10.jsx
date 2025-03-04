@@ -43,6 +43,7 @@ const ApiFetcher = () => {
 
   return (
     <div>
+      <h1>10. Optimized API Fetching with Memoized Response Processing</h1>
       {/* Clicking this button toggles the refresh state, causing re-render */}
       <button onClick={() => setRefresh(!refresh)}>Refresh Data</button>
 

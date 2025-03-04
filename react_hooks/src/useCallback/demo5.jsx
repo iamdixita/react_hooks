@@ -15,7 +15,12 @@ const Timer = () => {
     return () => clearInterval(interval);
   }, [tick]);
 
-  return <h2>Time: {time}s</h2>;
+  return(
+    <>
+    <h1>5. Memoizing a Function in useEffect</h1>
+    <h2>Time: {time}s</h2>
+    </>
+  ); 
 };
 
 export default Timer;

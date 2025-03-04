@@ -28,10 +28,13 @@ const UserProfile = () => {
   const { user, updateUser } = useContext(UserContext);
 
   return (
-    // Button to update the user's name when clicked
+    <>
+    <h1>7. Optimizing Context API with useCallback</h1>
+     {/* Button to update the user's name when clicked */}
     <button onClick={() => updateUser("Bob")}>
       Change Name (Current: {user.name})
     </button>
+    </>
   );
 };
 
