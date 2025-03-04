@@ -17,7 +17,7 @@ function UseStateExamples() {
       <p>useState is a React hook used to manage state inside functional components. 
          It allows components to store and update values dynamically without using class components.
       </p>
-      <Counter/>
+        <Counter/>
         <Toggle/>
         <TextInput/>
         <FormExample/>

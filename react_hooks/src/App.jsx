@@ -4,6 +4,7 @@ import {Routes, Route, Link} from 'react-router-dom';
 
 import UseStateExamples from "./useState";
 import UseEffectExamples from "./useEffect";
+import UseReducerExamples from "./useReducer";
 
 function App() {
     return (
@@ -15,7 +16,7 @@ function App() {
           <ul>
             <li><Link to="/useState">useState</Link></li>
             <li><Link to="/useEffect">useEffect</Link></li>
-
+            <li><Link to="/useReducer">useReducer</Link></li>
           </ul>
         </nav>
   
@@ -23,6 +24,7 @@ function App() {
         <Routes>
           <Route path="/useState" element={<UseStateExamples />} />
           <Route path="/useEffect" element={<UseEffectExamples/>} />
+          <Route path="/useReducer" element={<UseReducerExamples/>} />
           <Route path="/" element={<h2>Select a Hook Example</h2>} />
         </Routes>
       </div>

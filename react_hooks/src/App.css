@@ -34,3 +34,71 @@ button:hover {
 input{
   margin-right: 1rem;
 }
+/* Modal Overlay with fade-in animation */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Box with slide-in animation */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(0.8);
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+/* Button Styling */
+button {
+  padding: 10px 15px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Open Modal Button */
+button:first-child {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Close Modal Button */
+button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
