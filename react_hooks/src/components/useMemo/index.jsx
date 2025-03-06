@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setVisibleDemo } from "../../store/slice/useMemoSlice.js"; 
+
 import ExpensiveComponent from "./demo1";
 import FilteredList from "./demo2";
 import SortedList from "./demo3";
@@ -11,10 +14,11 @@ import RegexHighlighter from "./demo9";
 import CachedApiData from "./demo10";
 
 function UseMemoExamples() {
-  const [visibleDemo, setVisibleDemo] = useState(null);
+  const visibleDemo = useSelector((state) => state.useMemo.visibleDemo);
+  const dispatch = useDispatch();
 
   const toggleDemo = (demoName) => {
-    setVisibleDemo(visibleDemo === demoName ? null : demoName);
+    dispatch(setVisibleDemo(visibleDemo === demoName ? null : demoName));
   };
 
   return (
@@ -43,7 +47,7 @@ function UseMemoExamples() {
 
         <button onClick={() => toggleDemo("TransformedData")}>Transformed Data</button>
         {visibleDemo === "TransformedData" && <TransformedData />}
-        <br></br>
+        <br />
 
         <button onClick={() => toggleDemo("Cart")}>Cart</button>
         {visibleDemo === "Cart" && <Cart />}

@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setVisibleDemo } from "../../store/slice/useReducerSlice.js"; // Ensure correct path
+
 import Counter from "./demo1";
 import CounterWithStep from "./demo2";
 import TodoApp from "./demo3";
@@ -11,10 +14,11 @@ import Stopwatch from "./demo9";
 import AuthComponent from "./demo10";
 
 function UseReducerExamples() {
-  const [visibleDemo, setVisibleDemo] = useState(null);
+  const visibleDemo = useSelector((state) => state.useReducer.visibleDemo);
+  const dispatch = useDispatch();
 
   const toggleDemo = (demoName) => {
-    setVisibleDemo(visibleDemo === demoName ? null : demoName);
+    dispatch(setVisibleDemo(visibleDemo === demoName ? null : demoName));
   };
 
   return (
@@ -44,7 +48,8 @@ function UseReducerExamples() {
 
         <button onClick={() => toggleDemo("EnhancedModal")}>Enhanced Modal</button>
         {visibleDemo === "EnhancedModal" && <EnhancedModal />}
-<br></br>
+        <br />
+
         <button onClick={() => toggleDemo("EnhancedDataFetching")}>Enhanced Data Fetching</button>
         {visibleDemo === "EnhancedDataFetching" && <EnhancedDataFetching />}
 

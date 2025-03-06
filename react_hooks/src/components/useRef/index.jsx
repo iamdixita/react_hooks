@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setVisibleDemo } from "../../store/slice/useRefSlice.js";
+
 import FocusInput from "./demo1";
 import PreviousStateExample from "./demo2";
 import RenderCounter from "./demo3";
@@ -11,10 +14,11 @@ import MeasureDiv from "./demo9";
 import WebcamCapture from "./demo10";
 
 function UseRefExamples() {
-  const [visibleDemo, setVisibleDemo] = useState(null);
+  const visibleDemo = useSelector((state) => state.useRef.visibleDemo);
+  const dispatch = useDispatch();
 
   const toggleDemo = (demoName) => {
-    setVisibleDemo(visibleDemo === demoName ? null : demoName);
+    dispatch(setVisibleDemo(visibleDemo === demoName ? null : demoName));
   };
 
   return (
@@ -42,7 +46,7 @@ function UseRefExamples() {
         {visibleDemo === "TimerExample" && <TimerExample />}
 
         <button onClick={() => toggleDemo("EventListenerExample")}>Event Listener Example</button>
-        {visibleDemo === "EventListenerExample" && <EventListenerExample />} <br></br>
+        {visibleDemo === "EventListenerExample" && <EventListenerExample />} <br />
 
         <button onClick={() => toggleDemo("SaveDraft")}>Save Draft</button>
         {visibleDemo === "SaveDraft" && <SaveDraft />}

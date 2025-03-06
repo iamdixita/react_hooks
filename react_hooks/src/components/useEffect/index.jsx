@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setVisibleDemo } from "../../store/slice/useEffectSlice.js"; // Ensure correct path
+
 import EveryRender from "./demo1";
 import RunOnceEffect from "./demo2";
 import EffectWithState from "./demo3";
@@ -11,10 +14,11 @@ import DarkMode from "./demo9";
 import AnimatedText from "./demo10";
 
 function UseEffectExamples() {
-  const [visibleDemo, setVisibleDemo] = useState(null);
+  const visibleDemo = useSelector((state) => state.useEffect.visibleDemo);
+  const dispatch = useDispatch();
 
   const toggleDemo = (demoName) => {
-    setVisibleDemo(visibleDemo === demoName ? null : demoName);
+    dispatch(setVisibleDemo(visibleDemo === demoName ? null : demoName));
   };
 
   return (
@@ -22,8 +26,9 @@ function UseEffectExamples() {
       <header>useEffect Hook Examples</header>
       <h2>Definition:</h2>
       <p>
-        useEffect is a React Hook that lets you perform side effects in functional components.
-        It replaces lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount from class components.
+        <code>useEffect</code> is a React Hook that lets you perform side effects in functional components.
+        It replaces lifecycle methods like <code>componentDidMount</code>, <code>componentDidUpdate</code>, 
+        and <code>componentWillUnmount</code> from class components.
       </p>
 
       <div className="demo-list">

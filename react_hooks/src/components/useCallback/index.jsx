@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setVisibleDemo } from "../../store/slice/useCallbackSlice.js"; 
+
 import ClickCounter from "./demo1";
 import KeyPressListener from "./demo2";
 import SearchBar from "./demo3";
@@ -11,22 +14,21 @@ import Counter from "./demo9";
 import ApiFetcher from "./demo10";
 
 function UseCallbackExamples() {
-  const [visibleDemo, setVisibleDemo] = useState(null);
+  const visibleDemo = useSelector((state) => state.useCallback.visibleDemo);
+  const dispatch = useDispatch();
 
   const toggleDemo = (demoName) => {
-    setVisibleDemo(visibleDemo === demoName ? null : demoName);
+    dispatch(setVisibleDemo(visibleDemo === demoName ? null : demoName));
   };
 
   return (
     <div className="container">
-      {/* Header and Definition */}
       <header>useCallback Hook Examples</header>
       <h2>Definition:</h2>
       <p>
         <code>useCallback</code> is a React Hook that memoizes functions so that they do not get recreated on every render.
       </p>
 
-      {/* Buttons to toggle individual demos */}
       <div className="demo-list">
         <button onClick={() => toggleDemo("ClickCounter")}>Click Counter</button>
         {visibleDemo === "ClickCounter" && <ClickCounter />}

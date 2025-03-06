@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setVisibleDemo } from "../../store/slice/useStateSlice.js";
+
+
 import Counter from "./demo1";
 import Toggle from "./demo2";
 import TextInput from "./demo3";
@@ -11,10 +15,11 @@ import CountdownTimer from "./demo9";
 import FetchData from "./demo10";
 
 function UseStateExamples() {
-  const [visibleDemo, setVisibleDemo] = useState(null);
+  const visibleDemo = useSelector((state) => state.useState.visibleDemo);
+  const dispatch = useDispatch();
 
   const toggleDemo = (demoName) => {
-    setVisibleDemo(visibleDemo === demoName ? null : demoName);
+    dispatch(setVisibleDemo(visibleDemo === demoName ? null : demoName));
   };
 
   return (

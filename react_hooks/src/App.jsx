@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import "./App.css";
 import {Routes, Route, Link} from 'react-router-dom';
 
-import UseStateExamples from "./useState";
-import UseEffectExamples from "./useEffect";
-import UseReducerExamples from "./useReducer";
-import UseMemoExamples from "./useMemo";
-import UseCallbackExamples from "./useCallback";
-import UseRefExamples from "./useRef";
+import UseStateExamples from "./components/useState";
+import UseEffectExamples from "./components/useEffect";
+import UseReducerExamples from "./components/useReducer";
+import UseMemoExamples from "./components/useMemo";
+import UseCallbackExamples from "./components/useCallback";
+import UseRefExamples from "./components/useRef";
 
 function App() {
     return (
         <div>
         {/* <h1>React Hooks Demo</h1> */}
   
-        {/* Navigation Links */}
+        {/* Navigation Links */}  
         <nav>
           <ul>   
             <li><Link to="/useState">useState</Link></li>
